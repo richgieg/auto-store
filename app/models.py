@@ -1,21 +1,22 @@
 from . import db
 
 
-class Role(db.Model):
-    __tablename__ = 'roles'
+class Manufacturer(db.Model):
+    __tablename__ = 'manufacturers'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
-    users = db.relationship('User', backref='role', lazy='dynamic')
+    automobiles = db.relationship('Automobile', backref='manufacturer',
+                                  lazy='dynamic')
 
     def __repr__(self):
-        return '<Role %r>' % self.name
+        return '<Manufacturer %r>' % self.name
 
 
-class User(db.Model):
-    __tablename__ = 'users'
+class Automobile(db.Model):
+    __tablename__ = 'automobiles'
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), unique=True, index=True)
-    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    name = db.Column(db.String(64))
+    manufacturer_id = db.Column(db.Integer, db.ForeignKey('manufacturers.id'))
 
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<Automobile %r>' % self.name
