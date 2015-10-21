@@ -91,11 +91,11 @@ To be added at a later time...
 
 
 ##Run the App
-Your shiny new app comes with the Flask-Script extension, which allows a
+The ```auto-store``` app uses the Flask-Script extension, which allows a
 finer level of control over your app's execution from the command line. Also
 included, thanks to Miguel Grinberg, is a ```manage.py``` script which makes
-use of Flask-Script to provide some necessary commands. The
-following command executes your app on the development server with debugging
+use of Flask-Script to provide some necessary management commands. The
+following command executes the app on the development server with debugging
 and auto-restarts enabled.
 ```
 git clone https://github.com/richgieg/auto-store.git
@@ -106,7 +106,7 @@ source setup
 
 
 ##Connect
-Now that your app is running on the development server, you can access it
+Now that ```auto-store``` is running on the development server, you can access it
 from your browser by visiting the following address:
 ```
 http://localhost:5000
@@ -120,7 +120,7 @@ http://localhost:5000
 
 
 ##Deactivate the Virtual Environment
-When you're done developing and testing your app, you can return your shell
+When you're done running the app, you can return your shell
 back to its original state by deactivating the virtual environment.
 ```
 deactivate
