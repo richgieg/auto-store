@@ -2,7 +2,7 @@
 **Demo of an online automobile store.**
 
 The app
-code and template code is currently based on examples from the book
+and template code is currently based on examples from the book
 "Flask Web Development" by Miguel Grinberg. This will change as the project
 matures.
 
