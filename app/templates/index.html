@@ -6,7 +6,20 @@
 <div class="page-header">
     <h1>Auto Store</h1>
 </div>
-<div>
-    <p>Welcome to the Auto Store!</p>
+
+{% for man in manufacturers %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ man.name }}</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+        {% for auto in man.automobiles %}
+            <li class="list-group-item">{{ auto.name }}</li>
+        {% endfor %}
+        </ul>
+    </div>
 </div>
+{% endfor %}
+
 {% endblock %}

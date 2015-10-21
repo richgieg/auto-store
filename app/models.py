@@ -6,7 +6,7 @@ class Manufacturer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
     automobiles = db.relationship('Automobile', backref='manufacturer',
-                                  lazy='dynamic')
+                                  lazy='dynamic', order_by='Automobile.name')
 
     def __repr__(self):
         return '<Manufacturer %r>' % self.name
