@@ -16,7 +16,8 @@ class Automobile(db.Model):
     __tablename__ = 'automobiles'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64))
-    manufacturer_id = db.Column(db.Integer, db.ForeignKey('manufacturers.id'))
+    manufacturer_id = db.Column(db.Integer, db.ForeignKey('manufacturers.id'),
+                                nullable=False)
 
     def __repr__(self):
         return '<Automobile %r>' % self.name
