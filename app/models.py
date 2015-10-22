@@ -16,6 +16,7 @@ class Automobile(db.Model):
     __tablename__ = 'automobiles'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64))
+    year = db.Column(db.Integer, nullable=False)
     manufacturer_id = db.Column(db.Integer, db.ForeignKey('manufacturers.id'),
                                 nullable=False)
 
