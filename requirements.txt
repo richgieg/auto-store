@@ -17,5 +17,6 @@ argparse==1.2.1
 blinker==1.4
 dominate==2.1.16
 itsdangerous==0.24
+psycopg2==2.6.1
 python-editor==0.4
 wsgiref==0.1.2
